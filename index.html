@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeswin Sweets | Premium Brownies - Kumbakonam</title>
+    <meta name="description" content="Jeswin Sweets - Fresh homemade brownies in Kumbakonam. Mini, Medium & Large sizes. Order via WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B4513;
+            --primary-dark: #5D2E0A;
+            --accent: #D2691E;
+            --gold: #FFD700;
+            --cream: #FFF8F0;
+            --pink: #FF6B9D;
+            --purple: #9B59B6;
+            --green: #27AE60;
+            --blue: #3498DB;
+            --dark: #2C1810;
+            --white: #FFFFFF;
+            --shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFF8F0 0%, #FFE4C4 50%, #FFDAB9 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 248, 240, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(139, 69, 19, 0.1);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            position: relative;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(210, 105, 30, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(45deg, var(--accent), var(--pink), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5D4037;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 6px 25px rgba(139, 69, 19, 0.35);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.45);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Floating brownies decoration */
+        .floating-brownie {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.15;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .fb1 { top: 15%; left: 8%; animation-delay: 0s; }
+        .fb2 { top: 25%; right: 10%; animation-delay: 1.5s; font-size: 2.5rem; }
+        .fb3 { bottom: 20%; left: 12%; animation-delay: 3s; font-size: 2.8rem; }
+        .fb4 { bottom: 30%; right: 8%; animation-delay: 4.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Section common */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #6D4C41;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pink), var(--accent), var(--purple));
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about {
+            background: white;
+            border-radius: 40px 40px 0 0;
+            margin-top: -40px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-content p {
+            color: #5D4037;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .owner-card {
+            background: linear-gradient(135deg, #FFF5EE, #FFE4C4);
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 5px solid var(--accent);
+            margin-top: 24px;
+        }
+
+        .owner-card strong {
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+        }
+
+        /* Varieties Gallery */
+        .varieties {
+            background: linear-gradient(180deg, white 0%, #FFF8F0 100%);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s, box-shadow 0.4s;
+            position: relative;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(139, 69, 19, 0.2);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card .card-body {
+            padding: 20px;
+        }
+
+        .gallery-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .gallery-card p {
+            color: #6D4C41;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .flavor-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .tag-classic { background: linear-gradient(135deg, #8B4513, #D2691E); }
+        .tag-walnut { background: linear-gradient(135deg, #6B4423, #A0522D); }
+        .tag-caramel { background: linear-gradient(135deg, #DAA520, #FF8C00); }
+        .tag-oreo { background: linear-gradient(135deg, #2C3E50, #34495E); }
+        .tag-redvelvet { background: linear-gradient(135deg, #C0392B, #E74C3C); }
+        .tag-triple { background: linear-gradient(135deg, #4A235A, #7D3C98); }
+
+        /* Sizes Section */
+        .sizes {
+            background: white;
+        }
+
+        .size-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .size-card {
+            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
+            border-radius: 24px;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 3px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .size-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+        }
+
+        .size-card.mini::before { background: linear-gradient(90deg, #27AE60, #2ECC71); }
+        .size-card.medium::before { background: linear-gradient(90deg, #3498DB, #5DADE2); }
+        .size-card.large::before { background: linear-gradient(90deg, #9B59B6, #BB8FCE); }
+
+        .size-card:hover {
+            border-color: var(--accent);
+            transform: scale(1.03);
+        }
+
+        .size-icon {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+        }
+
+        .size-card h3 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .size-card .pieces {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .size-card p {
+            color: #5D4037;
+            font-size: 0.95rem;
+        }
+
+        .size-card .price-hint {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: #8B7355;
+            font-style: italic;
+        }
+
+        /* Booking Section */
+        .booking {
+            background: linear-gradient(135deg, #2C1810 0%, #5D2E0A 50%, #8B4513 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .booking .section-title h2,
+        .booking .section-title p {
+            color: white;
+        }
+
+        .booking .title-underline {
+            background: linear-gradient(90deg, var(--gold), var(--pink), var(--gold));
+        }
+
+        .booking-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #FFE4C4;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.95);
+            color: var(--dark);
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .size-selector {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .size-option {
+            position: relative;
+        }
+
+        .size-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .size-option label {
+            display: block;
+            padding: 16px 10px;
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .size-option input:checked + label {
+            background: linear-gradient(135deg, var(--gold), #FFA500);
+            color: var(--dark) !important;
+            border-color: var(--gold);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .size-option label span {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 400;
+            margin-top: 4px;
+            opacity: 0.9;
+        }
+
+        .qty-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 8px 12px;
+            width: fit-content;
+        }
+
+        .qty-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-btn:hover {
+            background: var(--accent);
+        }
+
+        .qty-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .whatsapp-order-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .whatsapp-order-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-order-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Contact */
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .contact-card p, .contact-card a {
+            color: #5D4037;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #FFE4C4;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer .logo {
+            color: white;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* Mobile */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                gap: 16px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .size-selector {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .booking-form {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">🍫 <span>Jeswin Sweets</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#varieties">Varieties</a></li>
+                <li><a href="#sizes">Sizes</a></li>
+                <li><a href="#booking">Order Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/918056587983" class="whatsapp-btn" target="_blank">
+                💬 WhatsApp
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="floating-brownie fb1">🍫</div>
+        <div class="floating-brownie fb2">🧁</div>
+        <div class="floating-brownie fb3">🍪</div>
+        <div class="floating-brownie fb4">🍩</div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">✨ Fresh Homemade Brownies</div>
+            <h1>Welcome to <span>Jeswin Sweets</span></h1>
+            <p>Kumbakonam-இன் சுவையான homemade brownies. Different shapes, colors & varieties. Mini, Medium, Large sizes. Order now via WhatsApp!</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">🛒 Order Now</a>
+                <a href="#varieties" class="btn-secondary">👀 View Varieties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Jeswin Sweets</h2>
+                <div class="title-underline"></div>
+                <p>Fresh, rich & delicious brownies made with love in Kumbakonam</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Fresh Chocolate Brownies">
+                </div>
+                <div class="about-content">
+                    <h3>Premium Quality Brownies</h3>
+                    <p>Jeswin Sweets-ல் நாங்கள் fresh ingredients பயன்படுத்தி homemade brownies தயார் செய்கிறோம். Classic chocolate முதல் special flavors வரை – every bite is pure happiness!</p>
+                    <p>Different shapes, different colors, different varieties – உங்கள் preference-க்கு ஏற்ப custom order-ம் எடுக்கிறோம். Party-க்கு, gift-க்கு, அல்லது daily treat-க்கு perfect!</p>
+                    <div class="owner-card">
+                        <strong>Owner: Jeswin Ragul</strong><br>
+                        📍 Kumbakonam, Tamil Nadu<br>
+                        📞 <a href="tel:8056587983" style="color:inherit;">8056587983</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Varieties -->
+    <section class="varieties" id="varieties">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Brownie Varieties</h2>
+                <div class="title-underline"></div>
+                <p>Different shapes • Different colors • Different flavors – choose your favorite!</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Classic Chocolate Brownie">
+                    <div class="card-body">
+                        <h3>Classic Chocolate</h3>
+                        <p>Rich, fudgy & pure chocolate bliss. The all-time favorite!</p>
+                        <span class="flavor-tag tag-classic">Classic</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80" alt="Walnut Brownie">
+                    <div class="card-body">
+                        <h3>Walnut Crunch</h3>
+                        <p>Loaded with crunchy walnuts for perfect texture & taste.</p>
+                        <span class="flavor-tag tag-walnut">Walnut</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Caramel Brownie">
+                    <div class="card-body">
+                        <h3>Salted Caramel</h3>
+                        <p>Gooey caramel swirls with a touch of sea salt. Irresistible!</p>
+                        <span class="flavor-tag tag-caramel">Caramel</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Oreo Brownie">
+                    <div class="card-body">
+                        <h3>Oreo Special</h3>
+                        <p>Crushed Oreo cookies mixed in rich chocolate brownie.</p>
+                        <span class="flavor-tag tag-oreo">Oreo</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Red Velvet Brownie">
+                    <div class="card-body">
+                        <h3>Red Velvet</h3>
+                        <p>Beautiful red color with cream cheese swirl. Party perfect!</p>
+                        <span class="flavor-tag tag-redvelvet">Red Velvet</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80" alt="Triple Chocolate">
+                    <div class="card-body">
+                        <h3>Triple Chocolate</h3>
+                        <p>Dark, milk & white chocolate chunks. Chocolate lover's dream!</p>
+                        <span class="flavor-tag tag-triple">Triple Choco</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sizes -->
+    <section class="sizes" id="sizes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Choose Your Size</h2>
+                <div class="title-underline"></div>
+                <p>Mini, Medium or Large – pick the perfect quantity for you</p>
+            </div>
+            <div class="size-cards">
+                <div class="size-card mini">
+                    <div class="size-icon">🍪</div>
+                    <h3>Mini</h3>
+                    <div class="pieces">6 – 12 Pieces</div>
+                    <p>Perfect for small treats, gifts or trying new flavors. Bite-sized happiness!</p>
+                    <div class="price-hint">Ideal for 1-2 people</div>
+                </div>
+                <div class="size-card medium">
+                    <div class="size-icon">🧁</div>
+                    <h3>Medium</h3>
+                    <div class="pieces">16 – 24 Pieces</div>
+                    <p>Great for family gatherings, office treats or small parties.</p>
+                    <div class="price-hint">Ideal for 4-6 people</div>
+                </div>
+                <div class="size-card large">
+                    <div class="size-icon">🍫</div>
+                    <h3>Large</h3>
+                    <div class="pieces">30 – 48 Pieces</div>
+                    <p>Best for big parties, celebrations, bulk orders & events.</p>
+                    <div class="price-hint">Ideal for 8+ people</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>📦 Book / Order Now</h2>
+                <div class="title-underline"></div>
+                <p>Select size, quantity & flavor → Click WhatsApp Order → Chat opens automatically with your order details</p>
+            </div>
+            
+            <form class="booking-form" id="orderForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label>Your Name *</label>
+                    <input type="text" id="customerName" placeholder="உங்கள் பெயர்" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="customerPhone" placeholder="உங்கள் mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" id="orderDate">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Size *</label>
+                    <div class="size-selector">
+                        <div class="size-option">
+                            <input type="radio" name="size" id="sizeMini" value="Mini" checked>
+                            <label for="sizeMini">Mini<br><span>6-12 pcs</span></label>
+                        </div>
+                        <div class="size-option">
+                            <input type="radio" name="size" id="sizeMedium" value="Medium">
+                            <label for="sizeMedium">Medium<br><span>16-24 pcs</span></label>
+                        </div>
+                        <div class="size-option">
+                            <input type="radio" name="size" id="sizeLarge" value="Large">
+                            <label for="sizeLarge">Large<br><span>30-48 pcs</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Number of Pieces *</label>
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
+                        <span class="qty-value" id="qtyValue">8</span>
+                        <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                    <small style="color:#FFE4C4; margin-top:8px; display:block;" id="qtyHint">Mini: 6 to 12 pieces recommended</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Flavor / Variety *</label>
+                    <select id="flavor" required>
+                        <option value="">-- Select Flavor --</option>
+                        <option value="Classic Chocolate">Classic Chocolate</option>
+                        <option value="Walnut Crunch">Walnut Crunch</option>
+                        <option value="Salted Caramel">Salted Caramel</option>
+                        <option value="Oreo Special">Oreo Special</option>
+                        <option value="Red Velvet">Red Velvet</option>
+                        <option value="Triple Chocolate">Triple Chocolate</option>
+                        <option value="Mixed (Assorted)">Mixed (Assorted)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Instructions (optional)</label>
+                    <textarea id="instructions" rows="3" placeholder="Any special request? Shape, color, gift packing etc."></textarea>
+                </div>
+
+                <button type="button" class="whatsapp-order-btn" onclick="sendWhatsAppOrder()">
+                    💬 WhatsApp Order அனுப்பு
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <div class="title-underline"></div>
+                <p>Reach us anytime for orders & inquiries</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone / WhatsApp</h3>
+                    <p><a href="tel:8056587983">8056587983</a></p>
+                    <p style="margin-top:8px;"><a href="https://wa.me/918056587983" target="_blank" style="color:#25D366; font-weight:600;">💬 Chat on WhatsApp</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">👤</div>
+                    <h3>Owner</h3>
+                    <p><strong>Jeswin Ragul</strong></p>
+                    <p>Jeswin Sweets</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Kumbakonam</p>
+                    <p>Tamil Nadu, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#" class="logo">🍫 Jeswin Sweets</a>
+        <p>Fresh Homemade Brownies • Kumbakonam</p>
+        <p style="margin-top:12px; font-size:0.85rem;">© 2026 Jeswin Sweets. All rights reserved. | Made with ❤️</p>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // Quantity control
+        let qty = 8;
+        const qtyValueEl = document.getElementById('qtyValue');
+        const qtyHintEl = document.getElementById('qtyHint');
+
+        function updateQtyHint() {
+            const size = document.querySelector('input[name="size"]:checked').value;
+            if (size === 'Mini') {
+                qtyHintEl.textContent = 'Mini: 6 to 12 pieces recommended';
+                if (qty < 6) qty = 6;
+                if (qty > 12) qty = 12;
+            } else if (size === 'Medium') {
+                qtyHintEl.textContent = 'Medium: 16 to 24 pieces recommended';
+                if (qty < 16) qty = 16;
+                if (qty > 24) qty = 24;
+            } else {
+                qtyHintEl.textContent = 'Large: 30 to 48 pieces recommended';
+                if (qty < 30) qty = 30;
+                if (qty > 48) qty = 48;
+            }
+            qtyValueEl.textContent = qty;
+        }
+
+        function changeQty(delta) {
+            qty += delta;
+            const size = document.querySelector('input[name="size"]:checked').value;
+            if (size === 'Mini') {
+                if (qty < 6) qty = 6;
+                if (qty > 12) qty = 12;
+            } else if (size === 'Medium') {
+                if (qty < 16) qty = 16;
+                if (qty > 24) qty = 24;
+            } else {
+                if (qty < 30) qty = 30;
+                if (qty > 48) qty = 48;
+            }
+            qtyValueEl.textContent = qty;
+        }
+
+        // Size change → update qty defaults
+        document.querySelectorAll('input[name="size"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'Mini') qty = 8;
+                else if (this.value === 'Medium') qty = 20;
+                else qty = 36;
+                updateQtyHint();
+            });
+        });
+
+        // WhatsApp Order
+        function sendWhatsAppOrder() {
+            const name = document.getElementById('customerName').value.trim();
+            const phone = document.getElementById('customerPhone').value.trim();
+            const date = document.getElementById('orderDate').value;
+            const size = document.querySelector('input[name="size"]:checked').value;
+            const flavor = document.getElementById('flavor').value;
+            const instructions = document.getElementById('instructions').value.trim();
+
+            if (!name) {
+                alert('தயவுசெய்து உங்கள் பெயரை உள்ளிடவும் / Please enter your name');
+                return;
+            }
+            if (!phone) {
+                alert('தயவுசெய்து mobile number உள்ளிடவும் / Please enter phone number');
+                return;
+            }
+            if (!flavor) {
+                alert('தயவுசெய்து flavor தேர்ந்தெடுக்கவும் / Please select a flavor');
+                return;
+            }
+
+            let message = `🍫 *Jeswin Sweets - New Order*%0A%0A`;
+            message += `👤 *Name:* ${name}%0A`;
+            message += `📞 *Phone:* ${phone}%0A`;
+            message += `📏 *Size:* ${size}%0A`;
+            message += `🔢 *Pieces:* ${qty}%0A`;
+            message += `🍪 *Flavor:* ${flavor}%0A`;
+            if (date) {
+                message += `📅 *Preferred Date:* ${date}%0A`;
+            }
+            if (instructions) {
+                message += `📝 *Special Instructions:* ${instructions}%0A`;
+            }
+            message += `%0A---%0AOrder from Jeswin Sweets Website`;
+
+            const whatsappUrl = `https://wa.me/918056587983?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Set min date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('orderDate').setAttribute('min', today);
+    </script>
+</body>
+</html>
