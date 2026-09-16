@@ -38,7 +38,6 @@
             overflow-x: hidden;
         }
 
-        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -130,7 +129,6 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -235,7 +233,6 @@
             transform: translateY(-3px);
         }
 
-        /* Floating brownies decoration */
         .floating-brownie {
             position: absolute;
             font-size: 3rem;
@@ -254,7 +251,6 @@
             50% { transform: translateY(-20px) rotate(10deg); }
         }
 
-        /* Section common */
         section {
             padding: 80px 20px;
         }
@@ -291,7 +287,6 @@
             border-radius: 2px;
         }
 
-        /* About */
         .about {
             background: white;
             border-radius: 40px 40px 0 0;
@@ -353,331 +348,250 @@
             font-size: 1.1rem;
         }
 
-        /* Varieties Gallery */
-        .varieties {
+        /* ===== BROWNIE MENU SECTION (NEW) ===== */
+        .brownie-menu {
             background: linear-gradient(180deg, white 0%, #FFF8F0 100%);
+            padding-top: 60px;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-        }
-
-        .gallery-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.4s, box-shadow 0.4s;
-            position: relative;
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(139, 69, 19, 0.2);
-        }
-
-        .gallery-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-card .card-body {
-            padding: 20px;
-        }
-
-        .gallery-card h3 {
-            font-size: 1.25rem;
-            color: var(--primary-dark);
-            margin-bottom: 8px;
-        }
-
-        .gallery-card p {
-            color: #6D4C41;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .flavor-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .tag-classic { background: linear-gradient(135deg, #8B4513, #D2691E); }
-        .tag-walnut { background: linear-gradient(135deg, #6B4423, #A0522D); }
-        .tag-caramel { background: linear-gradient(135deg, #DAA520, #FF8C00); }
-        .tag-oreo { background: linear-gradient(135deg, #2C3E50, #34495E); }
-        .tag-redvelvet { background: linear-gradient(135deg, #C0392B, #E74C3C); }
-        .tag-triple { background: linear-gradient(135deg, #4A235A, #7D3C98); }
-
-        /* Sizes Section */
-        .sizes {
-            background: white;
-        }
-
-        .size-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .size-card {
-            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
-            border-radius: 24px;
-            padding: 30px 24px;
+        .menu-intro {
             text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #FFE4C4, #FFDAB9);
+            padding: 18px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: var(--shadow);
+        }
+
+        .brownie-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .brownie-item {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
             box-shadow: var(--shadow);
             border: 3px solid transparent;
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            cursor: pointer;
         }
 
-        .size-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-        }
-
-        .size-card.mini::before { background: linear-gradient(90deg, #27AE60, #2ECC71); }
-        .size-card.medium::before { background: linear-gradient(90deg, #3498DB, #5DADE2); }
-        .size-card.large::before { background: linear-gradient(90deg, #9B59B6, #BB8FCE); }
-
-        .size-card:hover {
+        .brownie-item:hover {
             border-color: var(--accent);
-            transform: scale(1.03);
+            transform: translateY(-5px);
         }
 
-        .size-icon {
-            font-size: 3.5rem;
-            margin-bottom: 12px;
+        .brownie-item.active {
+            border-color: var(--pink);
+            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
         }
 
-        .size-card h3 {
-            font-size: 1.6rem;
+        .brownie-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
             color: var(--primary-dark);
             margin-bottom: 8px;
-            font-family: 'Playfair Display', serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .size-card .pieces {
+        .brownie-name span.tamil {
             font-size: 1.1rem;
             color: var(--accent);
             font-weight: 600;
+        }
+
+        .size-options {
+            display: none;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px dashed #E0C9A6;
+        }
+
+        .brownie-item.active .size-options {
+            display: block;
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .size-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 15px;
+            align-items: center;
+            background: rgba(255,255,255,0.7);
+            padding: 16px 20px;
+            border-radius: 16px;
             margin-bottom: 12px;
+            border: 2px solid #F5E6D3;
+            transition: all 0.3s;
         }
 
-        .size-card p {
-            color: #5D4037;
+        .size-row:hover {
+            border-color: var(--accent);
+            background: white;
+        }
+
+        .size-info h4 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .size-info p {
             font-size: 0.95rem;
+            color: #6D4C41;
         }
 
-        .size-card .price-hint {
-            margin-top: 16px;
-            font-size: 0.9rem;
-            color: #8B7355;
-            font-style: italic;
+        .size-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-right: 15px;
         }
 
-        /* Booking Section */
-        .booking {
-            background: linear-gradient(135deg, #2C1810 0%, #5D2E0A 50%, #8B4513 100%);
+        .order-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .booking::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .booking .section-title h2,
-        .booking .section-title p {
-            color: white;
-        }
-
-        .booking .title-underline {
-            background: linear-gradient(90deg, var(--gold), var(--pink), var(--gold));
-        }
-
-        .booking-form {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 40px;
-            max-width: 700px;
-            margin: 0 auto;
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 600;
             font-size: 0.95rem;
-            color: #FFE4C4;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 12px;
-            background: rgba(255,255,255,0.95);
-            color: var(--dark);
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .size-selector {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .size-option {
-            position: relative;
-        }
-
-        .size-option input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-        }
-
-        .size-option label {
-            display: block;
-            padding: 16px 10px;
-            background: rgba(255,255,255,0.15);
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 14px;
-            text-align: center;
             cursor: pointer;
             transition: all 0.3s;
-            color: white !important;
+            white-space: nowrap;
+        }
+
+        .order-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Order Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 24, 16, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            animation: popIn 0.35s ease;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .modal .selected-info {
+            text-align: center;
+            background: #FFF5EE;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            color: var(--accent);
             font-weight: 600;
         }
 
-        .size-option input:checked + label {
-            background: linear-gradient(135deg, var(--gold), #FFA500);
-            color: var(--dark) !important;
-            border-color: var(--gold);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        .modal .form-group {
+            margin-bottom: 18px;
         }
 
-        .size-option label span {
+        .modal label {
             display: block;
-            font-size: 0.8rem;
-            font-weight: 400;
-            margin-top: 4px;
-            opacity: 0.9;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #5D4037;
         }
 
-        .qty-control {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 12px;
-            padding: 8px 12px;
-            width: fit-content;
-        }
-
-        .qty-btn {
-            width: 40px;
-            height: 40px;
-            border: none;
-            background: var(--primary);
-            color: white;
-            border-radius: 10px;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: background 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .qty-btn:hover {
-            background: var(--accent);
-        }
-
-        .qty-value {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--dark);
-            min-width: 40px;
-            text-align: center;
-        }
-
-        .whatsapp-order-btn {
+        .modal input {
             width: 100%;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            padding: 18px;
+            padding: 14px 16px;
+            border: 2px solid #E0C9A6;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .modal input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+            padding: 14px;
             border: none;
             border-radius: 50px;
-            font-size: 1.15rem;
-            font-weight: 700;
+            font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
             transition: all 0.3s;
-            margin-top: 10px;
         }
 
-        .whatsapp-order-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+        .btn-cancel {
+            background: #f0f0f0;
+            color: #666;
         }
 
-        .whatsapp-order-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
+        .btn-send {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
         /* Contact */
@@ -715,123 +629,70 @@
             font-size: 1.3rem;
         }
 
-        .contact-card p, .contact-card a {
+        .contact-card p {
             color: #5D4037;
-            text-decoration: none;
             font-size: 1.05rem;
         }
 
-        .contact-card a:hover {
-            color: var(--accent);
-        }
-
-        /* Footer */
         footer {
             background: var(--dark);
             color: #FFE4C4;
             text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer .logo {
-            color: white;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
-        footer p {
-            opacity: 0.8;
+            padding: 30px 20px;
             font-size: 0.95rem;
         }
 
-        /* Mobile */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--primary);
+        footer strong {
+            color: var(--gold);
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                gap: 16px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
             .about-grid {
                 grid-template-columns: 1fr;
             }
-
-            .form-row {
+            .nav-links {
+                display: none;
+            }
+            .size-row {
                 grid-template-columns: 1fr;
+                text-align: center;
             }
-
-            .size-selector {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding-top: 100px;
-            }
-
-            .booking-form {
-                padding: 24px;
+            .size-price {
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">🍫 <span>Jeswin Sweets</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#varieties">Varieties</a></li>
-                <li><a href="#sizes">Sizes</a></li>
-                <li><a href="#booking">Order Now</a></li>
+                <li><a href="#menu">Brownies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="https://wa.me/918056587983" class="whatsapp-btn" target="_blank">
-                💬 WhatsApp
+            <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+                📱 WhatsApp Order
             </a>
-            <button class="menu-toggle" id="menuToggle">☰</button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="floating-brownie fb1">🍫</div>
-        <div class="floating-brownie fb2">🧁</div>
-        <div class="floating-brownie fb3">🍪</div>
-        <div class="floating-brownie fb4">🍩</div>
-        
+        <div class="floating-brownie fb2">🍪</div>
+        <div class="floating-brownie fb3">🤎</div>
+        <div class="floating-brownie fb4">✨</div>
         <div class="hero-content">
-            <div class="hero-badge">✨ Fresh Homemade Brownies</div>
-            <h1>Welcome to <span>Jeswin Sweets</span></h1>
-            <p>Kumbakonam-இன் சுவையான homemade brownies. Different shapes, colors & varieties. Mini, Medium, Large sizes. Order now via WhatsApp!</p>
+            <div class="hero-badge">✨ Premium Homemade Brownies ✨</div>
+            <h1>Jeswin Sweets<br><span>Brownies that melt your heart</span></h1>
+            <p>Freshly baked with love in Kumbakonam. Classic, Double, Triple, Ragi & Walnut Crunch – pure chocolate heaven.</p>
             <div class="hero-buttons">
-                <a href="#booking" class="btn-primary">🛒 Order Now</a>
-                <a href="#varieties" class="btn-secondary">👀 View Varieties</a>
+                <a href="#menu" class="btn-primary">Order Now 🍫</a>
+                <a href="#contact" class="btn-secondary">Contact Us</a>
             </div>
         </div>
     </section>
@@ -842,198 +703,242 @@
             <div class="section-title">
                 <h2>About Jeswin Sweets</h2>
                 <div class="title-underline"></div>
-                <p>Fresh, rich & delicious brownies made with love in Kumbakonam</p>
+                <p>Premium quality brownies made with pure love & finest ingredients</p>
             </div>
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Fresh Chocolate Brownies">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Premium Brownies">
                 </div>
                 <div class="about-content">
-                    <h3>Premium Quality Brownies</h3>
-                    <p>Jeswin Sweets-ல் நாங்கள் fresh ingredients பயன்படுத்தி homemade brownies தயார் செய்கிறோம். Classic chocolate முதல் special flavors வரை – every bite is pure happiness!</p>
-                    <p>Different shapes, different colors, different varieties – உங்கள் preference-க்கு ஏற்ப custom order-ம் எடுக்கிறோம். Party-க்கு, gift-க்கு, அல்லது daily treat-க்கு perfect!</p>
+                    <h3>Handcrafted with Passion</h3>
+                    <p>Every brownie is baked fresh using premium chocolate, pure butter and the finest ingredients. No preservatives. Just pure indulgence.</p>
+                    <p>From classic fudgy chocolate to rich triple chocolate and healthy ragi – we have something for every craving.</p>
                     <div class="owner-card">
-                        <strong>Owner: Jeswin Ragul</strong><br>
-                        📍 Kumbakonam, Tamil Nadu<br>
-                        📞 <a href="tel:8056587983" style="color:inherit;">8056587983</a>
+                        <strong>👩‍🍳 Jeswin</strong><br>
+                        Owner & Head Baker<br>
+                        Kumbakonam, Tamil Nadu
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Varieties -->
-    <section class="varieties" id="varieties">
+    <!-- BROWNIE MENU -->
+    <section class="brownie-menu" id="menu">
         <div class="container">
             <div class="section-title">
-                <h2>Our Brownie Varieties</h2>
+                <h2>Our Premium Brownies</h2>
                 <div class="title-underline"></div>
-                <p>Different shapes • Different colors • Different flavors – choose your favorite!</p>
+                <p>Premium Quality Brownies • தரமான பிரவுனிகள்</p>
             </div>
-            <div class="gallery">
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Classic Chocolate Brownie">
-                    <div class="card-body">
-                        <h3>Classic Chocolate</h3>
-                        <p>Rich, fudgy & pure chocolate bliss. The all-time favorite!</p>
-                        <span class="flavor-tag tag-classic">Classic</span>
-                    </div>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80" alt="Walnut Brownie">
-                    <div class="card-body">
-                        <h3>Walnut Crunch</h3>
-                        <p>Loaded with crunchy walnuts for perfect texture & taste.</p>
-                        <span class="flavor-tag tag-walnut">Walnut</span>
-                    </div>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Caramel Brownie">
-                    <div class="card-body">
-                        <h3>Salted Caramel</h3>
-                        <p>Gooey caramel swirls with a touch of sea salt. Irresistible!</p>
-                        <span class="flavor-tag tag-caramel">Caramel</span>
-                    </div>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Oreo Brownie">
-                    <div class="card-body">
-                        <h3>Oreo Special</h3>
-                        <p>Crushed Oreo cookies mixed in rich chocolate brownie.</p>
-                        <span class="flavor-tag tag-oreo">Oreo</span>
-                    </div>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Red Velvet Brownie">
-                    <div class="card-body">
-                        <h3>Red Velvet</h3>
-                        <p>Beautiful red color with cream cheese swirl. Party perfect!</p>
-                        <span class="flavor-tag tag-redvelvet">Red Velvet</span>
-                    </div>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80" alt="Triple Chocolate">
-                    <div class="card-body">
-                        <h3>Triple Chocolate</h3>
-                        <p>Dark, milk & white chocolate chunks. Chocolate lover's dream!</p>
-                        <span class="flavor-tag tag-triple">Triple Choco</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sizes -->
-    <section class="sizes" id="sizes">
-        <div class="container">
-            <div class="section-title">
-                <h2>Choose Your Size</h2>
-                <div class="title-underline"></div>
-                <p>Mini, Medium or Large – pick the perfect quantity for you</p>
+            <div style="text-align:center;">
+                <div class="menu-intro">👇 Order செய்ய தேவையானதை தொடவும் 👇</div>
             </div>
-            <div class="size-cards">
-                <div class="size-card mini">
-                    <div class="size-icon">🍪</div>
-                    <h3>Mini</h3>
-                    <div class="pieces">6 – 12 Pieces</div>
-                    <p>Perfect for small treats, gifts or trying new flavors. Bite-sized happiness!</p>
-                    <div class="price-hint">Ideal for 1-2 people</div>
-                </div>
-                <div class="size-card medium">
-                    <div class="size-icon">🧁</div>
-                    <h3>Medium</h3>
-                    <div class="pieces">16 – 24 Pieces</div>
-                    <p>Great for family gatherings, office treats or small parties.</p>
-                    <div class="price-hint">Ideal for 4-6 people</div>
-                </div>
-                <div class="size-card large">
-                    <div class="size-icon">🍫</div>
-                    <h3>Large</h3>
-                    <div class="pieces">30 – 48 Pieces</div>
-                    <p>Best for big parties, celebrations, bulk orders & events.</p>
-                    <div class="price-hint">Ideal for 8+ people</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Booking -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <div class="section-title">
-                <h2>📦 Book / Order Now</h2>
-                <div class="title-underline"></div>
-                <p>Select size, quantity & flavor → Click WhatsApp Order → Chat opens automatically with your order details</p>
-            </div>
-            
-            <form class="booking-form" id="orderForm" onsubmit="return false;">
-                <div class="form-group">
-                    <label>Your Name *</label>
-                    <input type="text" id="customerName" placeholder="உங்கள் பெயர்" required>
-                </div>
+            <div class="brownie-list">
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Phone Number *</label>
-                        <input type="tel" id="customerPhone" placeholder="உங்கள் mobile number" required>
+                <!-- 1. Classic Chocolate -->
+                <div class="brownie-item" onclick="toggleBrownie(this)">
+                    <div class="brownie-name">
+                        Classic Chocolate Brownie
+                        <span class="tamil">கிளாசிக் சாக்லேட் பிரவுனி</span>
                     </div>
-                    <div class="form-group">
-                        <label>Preferred Date</label>
-                        <input type="date" id="orderDate">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Select Size *</label>
-                    <div class="size-selector">
-                        <div class="size-option">
-                            <input type="radio" name="size" id="sizeMini" value="Mini" checked>
-                            <label for="sizeMini">Mini<br><span>6-12 pcs</span></label>
+                    <div class="size-options">
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>கால் கிலோ (¼ kg)</h4>
+                                <p>6 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹230</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Classic Chocolate Brownie', 'கால் கிலோ (6 Pieces)', 230)">Order செய்ய தொடவும்</button>
+                            </div>
                         </div>
-                        <div class="size-option">
-                            <input type="radio" name="size" id="sizeMedium" value="Medium">
-                            <label for="sizeMedium">Medium<br><span>16-24 pcs</span></label>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>அரை கிலோ (½ kg)</h4>
+                                <p>12 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹450</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Classic Chocolate Brownie', 'அரை கிலோ (12 Pieces)', 450)">Order செய்ய தொடவும்</button>
+                            </div>
                         </div>
-                        <div class="size-option">
-                            <input type="radio" name="size" id="sizeLarge" value="Large">
-                            <label for="sizeLarge">Large<br><span>30-48 pcs</span></label>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>ஒரு கிலோ (1 kg)</h4>
+                                <p>18 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹850</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Classic Chocolate Brownie', 'ஒரு கிலோ (18 Pieces)', 850)">Order செய்ய தொடவும்</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Number of Pieces *</label>
-                    <div class="qty-control">
-                        <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
-                        <span class="qty-value" id="qtyValue">8</span>
-                        <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+                <!-- 2. Double Chocolate -->
+                <div class="brownie-item" onclick="toggleBrownie(this)">
+                    <div class="brownie-name">
+                        Double Chocolate Brownie
+                        <span class="tamil">டபுள் சாக்லேட் பிரவுனி</span>
                     </div>
-                    <small style="color:#FFE4C4; margin-top:8px; display:block;" id="qtyHint">Mini: 6 to 12 pieces recommended</small>
+                    <div class="size-options">
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>கால் கிலோ (¼ kg)</h4>
+                                <p>6 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹300</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Double Chocolate Brownie', 'கால் கிலோ (6 Pieces)', 300)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>அரை கிலோ (½ kg)</h4>
+                                <p>12 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹570</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Double Chocolate Brownie', 'அரை கிலோ (12 Pieces)', 570)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>ஒரு கிலோ (1 kg)</h4>
+                                <p>18 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹1100</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Double Chocolate Brownie', 'ஒரு கிலோ (18 Pieces)', 1100)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Flavor / Variety *</label>
-                    <select id="flavor" required>
-                        <option value="">-- Select Flavor --</option>
-                        <option value="Classic Chocolate">Classic Chocolate</option>
-                        <option value="Walnut Crunch">Walnut Crunch</option>
-                        <option value="Salted Caramel">Salted Caramel</option>
-                        <option value="Oreo Special">Oreo Special</option>
-                        <option value="Red Velvet">Red Velvet</option>
-                        <option value="Triple Chocolate">Triple Chocolate</option>
-                        <option value="Mixed (Assorted)">Mixed (Assorted)</option>
-                    </select>
+                <!-- 3. Triple Chocolate -->
+                <div class="brownie-item" onclick="toggleBrownie(this)">
+                    <div class="brownie-name">
+                        Triple Chocolate Brownie
+                        <span class="tamil">ட்ரிபிள் சாக்லேட் பிரவுனி</span>
+                    </div>
+                    <div class="size-options">
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>கால் கிலோ (¼ kg)</h4>
+                                <p>6 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹350</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Triple Chocolate Brownie', 'கால் கிலோ (6 Pieces)', 350)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>அரை கிலோ (½ kg)</h4>
+                                <p>12 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹680</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Triple Chocolate Brownie', 'அரை கிலோ (12 Pieces)', 680)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>ஒரு கிலோ (1 kg)</h4>
+                                <p>18 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹1310</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Triple Chocolate Brownie', 'ஒரு கிலோ (18 Pieces)', 1310)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Special Instructions (optional)</label>
-                    <textarea id="instructions" rows="3" placeholder="Any special request? Shape, color, gift packing etc."></textarea>
+                <!-- 4. Ragi Brownie -->
+                <div class="brownie-item" onclick="toggleBrownie(this)">
+                    <div class="brownie-name">
+                        Ragi Brownie
+                        <span class="tamil">ராகி பிரவுனி</span>
+                    </div>
+                    <div class="size-options">
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>கால் கிலோ (¼ kg)</h4>
+                                <p>6 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹210</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Ragi Brownie', 'கால் கிலோ (6 Pieces)', 210)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>அரை கிலோ (½ kg)</h4>
+                                <p>12 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹390</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Ragi Brownie', 'அரை கிலோ (12 Pieces)', 390)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>ஒரு கிலோ (1 kg)</h4>
+                                <p>18 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹910</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Ragi Brownie', 'ஒரு கிலோ (18 Pieces)', 910)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <button type="button" class="whatsapp-order-btn" onclick="sendWhatsAppOrder()">
-                    💬 WhatsApp Order அனுப்பு
-                </button>
-            </form>
+                <!-- 5. Walnut Crunch -->
+                <div class="brownie-item" onclick="toggleBrownie(this)">
+                    <div class="brownie-name">
+                        Walnut Crunch Brownie
+                        <span class="tamil">வால்நட் கிரஞ்ச் பிரவுனி</span>
+                    </div>
+                    <div class="size-options">
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>கால் கிலோ (¼ kg)</h4>
+                                <p>6 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹350</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Walnut Crunch Brownie', 'கால் கிலோ (6 Pieces)', 350)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>அரை கிலோ (½ kg)</h4>
+                                <p>12 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹650</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Walnut Crunch Brownie', 'அரை கிலோ (12 Pieces)', 650)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                        <div class="size-row">
+                            <div class="size-info">
+                                <h4>ஒரு கிலோ (1 kg)</h4>
+                                <p>18 Pieces</p>
+                            </div>
+                            <div style="display:flex; align-items:center;">
+                                <span class="size-price">₹1100</span>
+                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Walnut Crunch Brownie', 'ஒரு கிலோ (18 Pieces)', 1100)">Order செய்ய தொடவும்</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -1043,136 +948,111 @@
             <div class="section-title">
                 <h2>Contact Us</h2>
                 <div class="title-underline"></div>
-                <p>Reach us anytime for orders & inquiries</p>
+                <p>Order your favourite brownies today</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Phone / WhatsApp</h3>
-                    <p><a href="tel:8056587983">8056587983</a></p>
-                    <p style="margin-top:8px;"><a href="https://wa.me/918056587983" target="_blank" style="color:#25D366; font-weight:600;">💬 Chat on WhatsApp</a></p>
+                    <div class="contact-icon">👩‍🍳</div>
+                    <h3>Owner</h3>
+                    <p><strong>Jeswin</strong></p>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">👤</div>
-                    <h3>Owner</h3>
-                    <p><strong>Jeswin Ragul</strong></p>
-                    <p>Jeswin Sweets</p>
+                    <div class="contact-icon">📱</div>
+                    <h3>WhatsApp / Call</h3>
+                    <p>+91 XXXXX XXXXX</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">📍</div>
                     <h3>Location</h3>
-                    <p>Kumbakonam</p>
-                    <p>Tamil Nadu, India</p>
+                    <p>Kumbakonam, Tamil Nadu</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <a href="#" class="logo">🍫 Jeswin Sweets</a>
-        <p>Fresh Homemade Brownies • Kumbakonam</p>
-        <p style="margin-top:12px; font-size:0.85rem;">© 2026 Jeswin Sweets. All rights reserved. | Made with ❤️</p>
+        <p>© 2025 <strong>Jeswin Sweets</strong> • Premium Homemade Brownies • Kumbakonam</p>
+        <p style="margin-top:8px; font-size:0.85rem;">Made with 🍫 & ❤️</p>
     </footer>
 
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <h3>Order Details</h3>
+            <div class="selected-info" id="selectedInfo"></div>
+            <div class="form-group">
+                <label>உங்கள் பெயர் / Your Name</label>
+                <input type="text" id="customerName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label>மொபைல் நம்பர் / Phone Number</label>
+                <input type="tel" id="customerPhone" placeholder="10 digit mobile number" required>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn-send" onclick="sendToWhatsApp()">Send to WhatsApp 💚</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Mobile menu
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
+        let currentBrownie = '';
+        let currentSize = '';
+        let currentPrice = 0;
 
-        // Quantity control
-        let qty = 8;
-        const qtyValueEl = document.getElementById('qtyValue');
-        const qtyHintEl = document.getElementById('qtyHint');
-
-        function updateQtyHint() {
-            const size = document.querySelector('input[name="size"]:checked').value;
-            if (size === 'Mini') {
-                qtyHintEl.textContent = 'Mini: 6 to 12 pieces recommended';
-                if (qty < 6) qty = 6;
-                if (qty > 12) qty = 12;
-            } else if (size === 'Medium') {
-                qtyHintEl.textContent = 'Medium: 16 to 24 pieces recommended';
-                if (qty < 16) qty = 16;
-                if (qty > 24) qty = 24;
-            } else {
-                qtyHintEl.textContent = 'Large: 30 to 48 pieces recommended';
-                if (qty < 30) qty = 30;
-                if (qty > 48) qty = 48;
-            }
-            qtyValueEl.textContent = qty;
-        }
-
-        function changeQty(delta) {
-            qty += delta;
-            const size = document.querySelector('input[name="size"]:checked').value;
-            if (size === 'Mini') {
-                if (qty < 6) qty = 6;
-                if (qty > 12) qty = 12;
-            } else if (size === 'Medium') {
-                if (qty < 16) qty = 16;
-                if (qty > 24) qty = 24;
-            } else {
-                if (qty < 30) qty = 30;
-                if (qty > 48) qty = 48;
-            }
-            qtyValueEl.textContent = qty;
-        }
-
-        // Size change → update qty defaults
-        document.querySelectorAll('input[name="size"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                if (this.value === 'Mini') qty = 8;
-                else if (this.value === 'Medium') qty = 20;
-                else qty = 36;
-                updateQtyHint();
+        function toggleBrownie(el) {
+            // Close others
+            document.querySelectorAll('.brownie-item').forEach(item => {
+                if (item !== el) item.classList.remove('active');
             });
-        });
+            el.classList.toggle('active');
+        }
 
-        // WhatsApp Order
-        function sendWhatsAppOrder() {
+        function openOrder(brownie, size, price) {
+            currentBrownie = brownie;
+            currentSize = size;
+            currentPrice = price;
+            document.getElementById('selectedInfo').innerHTML = 
+                `<strong>\( {brownie}</strong><br> \){size} • ₹${price}`;
+            document.getElementById('orderModal').classList.add('active');
+            document.getElementById('customerName').value = '';
+            document.getElementById('customerPhone').value = '';
+        }
+
+        function closeModal() {
+            document.getElementById('orderModal').classList.remove('active');
+        }
+
+        function sendToWhatsApp() {
             const name = document.getElementById('customerName').value.trim();
             const phone = document.getElementById('customerPhone').value.trim();
-            const date = document.getElementById('orderDate').value;
-            const size = document.querySelector('input[name="size"]:checked').value;
-            const flavor = document.getElementById('flavor').value;
-            const instructions = document.getElementById('instructions').value.trim();
 
-            if (!name) {
-                alert('தயவுசெய்து உங்கள் பெயரை உள்ளிடவும் / Please enter your name');
-                return;
-            }
-            if (!phone) {
-                alert('தயவுசெய்து mobile number உள்ளிடவும் / Please enter phone number');
-                return;
-            }
-            if (!flavor) {
-                alert('தயவுசெய்து flavor தேர்ந்தெடுக்கவும் / Please select a flavor');
+            if (!name || !phone) {
+                alert('பெயர் மற்றும் மொபைல் நம்பர் கட்டாயம்!');
                 return;
             }
 
-            let message = `🍫 *Jeswin Sweets - New Order*%0A%0A`;
-            message += `👤 *Name:* ${name}%0A`;
-            message += `📞 *Phone:* ${phone}%0A`;
-            message += `📏 *Size:* ${size}%0A`;
-            message += `🔢 *Pieces:* ${qty}%0A`;
-            message += `🍪 *Flavor:* ${flavor}%0A`;
-            if (date) {
-                message += `📅 *Preferred Date:* ${date}%0A`;
-            }
-            if (instructions) {
-                message += `📝 *Special Instructions:* ${instructions}%0A`;
-            }
-            message += `%0A---%0AOrder from Jeswin Sweets Website`;
+            // CHANGE THIS NUMBER TO YOUR REAL WHATSAPP NUMBER
+            const ownerNumber = '91XXXXXXXXXX';
 
-            const whatsappUrl = `https://wa.me/918056587983?text=${message}`;
-            window.open(whatsappUrl, '_blank');
+            const message = `🍫 *New Brownie Order - Jeswin Sweets*%0A%0A` +
+                `👤 *Name:* ${name}%0A` +
+                `📱 *Phone:* ${phone}%0A%0A` +
+                `🛒 *Order Details:*%0A` +
+                `• Brownie: ${currentBrownie}%0A` +
+                `• Size: ${currentSize}%0A` +
+                `• Price: ₹${currentPrice}%0A%0A` +
+                `_Ordered from website_`;
+
+            const url = `https://wa.me/\( {ownerNumber}?text= \){message}`;
+            window.open(url, '_blank');
+            closeModal();
         }
 
-        // Set min date to today
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('orderDate').setAttribute('min', today);
+        // Close modal on outside click
+        document.getElementById('orderModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
     </script>
 </body>
 </html>
