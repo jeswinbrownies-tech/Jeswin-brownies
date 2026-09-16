@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Jeswin Sweets | Premium Brownies - Kumbakonam</title>
-
-    <meta name="description"
-          content="Jeswin Sweets - Fresh homemade brownies in Kumbakonam. Mini, Medium & Large sizes. Order via WhatsApp.">
-
+    <meta name="description" content="Jeswin Sweets - Fresh homemade brownies in Kumbakonam. Mini, Medium & Large sizes. Order via WhatsApp.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-          rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #8B4513;
@@ -25,6 +18,7 @@
             --pink: #FF6B9D;
             --purple: #9B59B6;
             --green: #27AE60;
+            --blue: #3498DB;
             --dark: #2C1810;
             --white: #FFFFFF;
             --shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
@@ -36,24 +30,13 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(
-                135deg,
-                #FFF8F0 0%,
-                #FFE4C4 50%,
-                #FFDAB9 100%
-            );
+            background: linear-gradient(135deg, #FFF8F0 0%, #FFE4C4 50%, #FFDAB9 100%);
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
-
-        /* ================= NAVBAR ================= */
 
         .navbar {
             position: fixed;
@@ -68,7 +51,7 @@
 
         .nav-container {
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -87,11 +70,7 @@
         }
 
         .logo span {
-            background: linear-gradient(
-                45deg,
-                var(--primary),
-                var(--accent)
-            );
+            background: linear-gradient(45deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -130,8 +109,6 @@
             width: 100%;
         }
 
-        /* ================= HERO ================= */
-
         .hero {
             min-height: 100vh;
             display: flex;
@@ -140,23 +117,10 @@
             text-align: center;
             padding: 120px 20px 60px;
             position: relative;
-
-            background:
-                radial-gradient(
-                    circle at 20% 80%,
-                    rgba(255, 107, 157, 0.15) 0%,
-                    transparent 50%
-                ),
-                radial-gradient(
-                    circle at 80% 20%,
-                    rgba(155, 89, 182, 0.15) 0%,
-                    transparent 50%
-                ),
-                radial-gradient(
-                    circle at 50% 50%,
-                    rgba(210, 105, 30, 0.1) 0%,
-                    transparent 70%
-                );
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(210, 105, 30, 0.1) 0%, transparent 70%);
         }
 
         .hero-content {
@@ -166,11 +130,7 @@
 
         .hero-badge {
             display: inline-block;
-            background: linear-gradient(
-                135deg,
-                var(--pink),
-                var(--purple)
-            );
+            background: linear-gradient(135deg, var(--pink), var(--purple));
             color: white;
             padding: 8px 20px;
             border-radius: 50px;
@@ -181,13 +141,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .hero h1 {
@@ -200,12 +155,7 @@
         }
 
         .hero h1 span {
-            background: linear-gradient(
-                45deg,
-                var(--accent),
-                var(--pink),
-                var(--purple)
-            );
+            background: linear-gradient(45deg, var(--accent), var(--pink), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -214,7 +164,7 @@
             font-size: 1.2rem;
             color: #5D4037;
             margin-bottom: 30px;
-            max-width: 650px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -226,25 +176,18 @@
             flex-wrap: wrap;
         }
 
-        .btn-primary,
-        .btn-secondary {
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
             padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: linear-gradient(
-                135deg,
-                var(--primary),
-                var(--accent)
-            );
-            color: white;
             box-shadow: 0 6px 25px rgba(139, 69, 19, 0.35);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -255,7 +198,13 @@
         .btn-secondary {
             background: white;
             color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
             border: 2px solid var(--primary);
+            transition: all 0.3s;
         }
 
         .btn-secondary:hover {
@@ -263,8 +212,6 @@
             color: white;
             transform: translateY(-3px);
         }
-
-        /* ================= FLOATING ================= */
 
         .floating-brownie {
             position: absolute;
@@ -274,42 +221,15 @@
             pointer-events: none;
         }
 
-        .fb1 {
-            top: 15%;
-            left: 8%;
-        }
-
-        .fb2 {
-            top: 25%;
-            right: 10%;
-            animation-delay: 1.5s;
-            font-size: 2.5rem;
-        }
-
-        .fb3 {
-            bottom: 20%;
-            left: 12%;
-            animation-delay: 3s;
-            font-size: 2.8rem;
-        }
-
-        .fb4 {
-            bottom: 30%;
-            right: 8%;
-            animation-delay: 4.5s;
-        }
+        .fb1 { top: 15%; left: 8%; animation-delay: 0s; }
+        .fb2 { top: 25%; right: 10%; animation-delay: 1.5s; font-size: 2.5rem; }
+        .fb3 { bottom: 20%; left: 12%; animation-delay: 3s; font-size: 2.8rem; }
+        .fb4 { bottom: 30%; right: 8%; animation-delay: 4.5s; }
 
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(10deg);
-            }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
         }
-
-        /* ================= GENERAL ================= */
 
         section {
             padding: 80px 20px;
@@ -317,7 +237,7 @@
 
         .container {
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .section-title {
@@ -336,23 +256,16 @@
             color: #6D4C41;
             font-size: 1.1rem;
             max-width: 600px;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .title-underline {
             width: 80px;
             height: 4px;
-            background: linear-gradient(
-                90deg,
-                var(--pink),
-                var(--accent),
-                var(--purple)
-            );
+            background: linear-gradient(90deg, var(--pink), var(--accent), var(--purple));
             margin: 16px auto 0;
             border-radius: 2px;
         }
-
-        /* ================= ABOUT ================= */
 
         .about {
             background: white;
@@ -360,7 +273,7 @@
             margin-top: -40px;
             position: relative;
             z-index: 5;
-            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
         }
 
         .about-grid {
@@ -403,42 +316,31 @@
         }
 
         .owner-card {
-            background: linear-gradient(
-                135deg,
-                #FFF5EE,
-                #FFE4C4
-            );
+            background: linear-gradient(135deg, #FFF5EE, #FFE4C4);
             padding: 20px;
             border-radius: 16px;
             border-left: 5px solid var(--accent);
             margin-top: 24px;
         }
 
-        /* ================= MENU ================= */
+        .owner-card strong {
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+        }
 
+        /* BROWNIE MENU */
         .brownie-menu {
-            background: linear-gradient(
-                180deg,
-                white 0%,
-                #FFF8F0 100%
-            );
+            background: linear-gradient(180deg, white 0%, #FFF8F0 100%);
             padding-top: 60px;
         }
 
-        .menu-intro-wrapper {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
         .menu-intro {
-            font-size: 1.4rem;
+            text-align: center;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--primary-dark);
-            background: linear-gradient(
-                135deg,
-                #FFE4C4,
-                #FFDAB9
-            );
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #FFE4C4, #FFDAB9);
             padding: 18px 30px;
             border-radius: 50px;
             display: inline-block;
@@ -448,15 +350,15 @@
         .brownie-list {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 28px;
             max-width: 900px;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .brownie-item {
             background: white;
             border-radius: 24px;
-            padding: 30px;
+            padding: 28px;
             box-shadow: var(--shadow);
             border: 3px solid transparent;
             transition: all 0.3s;
@@ -465,39 +367,37 @@
 
         .brownie-item:hover {
             border-color: var(--accent);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
         .brownie-item.active {
             border-color: var(--pink);
-            background: linear-gradient(
-                145deg,
-                #FFF8F0,
-                #FFEFD5
-            );
+            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
         }
 
         .brownie-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: var(--primary-dark);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .brownie-name span.tamil {
-            font-size: 1.1rem;
+        .brownie-name .tamil {
+            font-size: 1.05rem;
             color: var(--accent);
             font-weight: 600;
+            font-family: 'Poppins', sans-serif;
         }
 
         .size-options {
             display: none;
-            margin-top: 25px;
-            padding-top: 25px;
+            margin-top: 22px;
+            padding-top: 22px;
             border-top: 2px dashed #E0C9A6;
         }
 
@@ -507,20 +407,13 @@
         }
 
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-15px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .size-row {
             display: grid;
-            grid-template-columns: 1fr auto auto;
+            grid-template-columns: 1fr auto;
             gap: 15px;
             align-items: center;
             background: rgba(255,255,255,0.7);
@@ -537,29 +430,25 @@
         }
 
         .size-info h4 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--primary-dark);
             margin-bottom: 4px;
         }
 
         .size-info p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #6D4C41;
         }
 
         .size-price {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--accent);
-            white-space: nowrap;
+            margin-right: 12px;
         }
 
         .order-btn {
-            background: linear-gradient(
-                135deg,
-                #25D366,
-                #128C7E
-            );
+            background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
             border: none;
             padding: 12px 22px;
@@ -576,8 +465,7 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-        /* ================= MODAL ================= */
-
+        /* Modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -600,46 +488,39 @@
         .modal {
             background: white;
             border-radius: 24px;
-            padding: 35px;
-            max-width: 450px;
+            padding: 32px;
+            max-width: 440px;
             width: 100%;
             box-shadow: 0 25px 60px rgba(0,0,0,0.3);
             animation: popIn 0.35s ease;
         }
 
         @keyframes popIn {
-            from {
-                transform: scale(0.9);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .modal h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--primary-dark);
             margin-bottom: 8px;
             text-align: center;
         }
 
-        .selected-info {
+        .modal .selected-info {
             text-align: center;
             background: #FFF5EE;
             padding: 12px;
             border-radius: 12px;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             font-size: 1.05rem;
             color: var(--accent);
             font-weight: 600;
         }
 
-        .form-group {
-            margin-bottom: 18px;
+        .modal .form-group {
+            margin-bottom: 16px;
         }
 
         .modal label {
@@ -651,7 +532,7 @@
 
         .modal input {
             width: 100%;
-            padding: 14px 16px;
+            padding: 13px 15px;
             border: 2px solid #E0C9A6;
             border-radius: 12px;
             font-size: 1rem;
@@ -667,7 +548,7 @@
         .modal-buttons {
             display: flex;
             gap: 12px;
-            margin-top: 25px;
+            margin-top: 22px;
         }
 
         .modal-buttons button {
@@ -687,11 +568,7 @@
         }
 
         .btn-send {
-            background: linear-gradient(
-                135deg,
-                #25D366,
-                #128C7E
-            );
+            background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
         }
 
@@ -700,28 +577,20 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-        /* ================= CONTACT ================= */
-
+        /* Contact */
         .contact {
             background: white;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(280px, 1fr)
-            );
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
         }
 
         .contact-card {
-            background: linear-gradient(
-                145deg,
-                #FFF8F0,
-                #FFEFD5
-            );
-            padding: 30px;
+            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
+            padding: 28px;
             border-radius: 20px;
             text-align: center;
             box-shadow: var(--shadow);
@@ -733,14 +602,14 @@
         }
 
         .contact-icon {
-            font-size: 2.8rem;
-            margin-bottom: 16px;
+            font-size: 2.6rem;
+            margin-bottom: 14px;
         }
 
         .contact-card h3 {
             color: var(--primary-dark);
             margin-bottom: 10px;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
         }
 
         .contact-card p {
@@ -748,19 +617,11 @@
             font-size: 1.05rem;
         }
 
-        .contact-card a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* ================= FOOTER ================= */
-
         footer {
             background: var(--dark);
             color: #FFE4C4;
             text-align: center;
-            padding: 30px 20px;
+            padding: 28px 20px;
             font-size: 0.95rem;
         }
 
@@ -768,59 +629,81 @@
             color: var(--gold);
         }
 
-        /* ================= MOBILE ================= */
-
         @media (max-width: 768px) {
-
-            .nav-container {
-                justify-content: center;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
             .about-grid {
                 grid-template-columns: 1fr;
             }
-
-            .about-image img {
-                height: 300px;
+            .nav-links {
+                display: none;
             }
-
             .size-row {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .size-price {
-                margin: 5px 0;
+                margin: 10px 0;
             }
-
-            .order-btn {
-                width: 100%;
-            }
-
             .brownie-name {
-                font-size: 1.5rem;
-            }
-
-            .menu-intro {
-                font-size: 1.1rem;
-            }
-
-            .modal {
-                padding: 25px 20px;
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
+            <a href="#" class="logo">🍫 <span>Jeswin Sweets</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Brownies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <a
+    <!-- Hero -->
+    <section class="hero">
+        <div class="floating-brownie fb1">🍫</div>
+        <div class="floating-brownie fb2">🍪</div>
+        <div class="floating-brownie fb3">🤎</div>
+        <div class="floating-brownie fb4">✨</div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ Premium Homemade Brownies ✨</div>
+            <h1>Jeswin Sweets<br><span>Brownies that melt your heart</span></h1>
+            <p>Freshly baked with love in Kumbakonam. Classic, Double, Triple, Ragi & Walnut Crunch – pure chocolate heaven.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">Order Now 🍫</a>
+                <a href="#contact" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Jeswin Sweets</h2>
+                <div class="title-underline"></div>
+                <p>Premium quality brownies made with pure love & finest ingredients</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Premium Brownies">
+                </div>
+                <div class="about-content">
+                    <h3>Handcrafted with Passion</h3>
+                    <p>Kumbakonam-இல் இருந்து புதிதாக சுடப்பட்ட பிரீமியம் பிரவுனிகள். ஒவ்வொரு பைஸும் அன்போடு, தரமான பொருட்களுடன் தயாரிக்கப்படுகிறது.</p>
+                    <p>Classic Chocolate, Double Chocolate, Triple Chocolate, Ragi Brownie மற்றும் Walnut Crunch – உங்கள் சுவைக்கு ஏற்றவாறு தேர்ந்தெடுங்கள்.</p>
+                    <div class="owner-card">
+                        <strong>Jeswin Sweets</strong><br>
+                        Fresh • Homemade • Made with Love<br>
+                        📍 Kumbakonam
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brownie Menu -->
