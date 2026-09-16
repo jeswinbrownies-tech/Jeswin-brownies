@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Jeswin Sweets | Premium Brownies - Kumbakonam</title>
-    <meta name="description" content="Jeswin Sweets - Fresh homemade brownies in Kumbakonam. Mini, Medium & Large sizes. Order via WhatsApp.">
+
+    <meta name="description"
+          content="Jeswin Sweets - Fresh homemade brownies in Kumbakonam. Mini, Medium & Large sizes. Order via WhatsApp.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
     <style>
         :root {
             --primary: #8B4513;
@@ -18,7 +25,6 @@
             --pink: #FF6B9D;
             --purple: #9B59B6;
             --green: #27AE60;
-            --blue: #3498DB;
             --dark: #2C1810;
             --white: #FFFFFF;
             --shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
@@ -30,13 +36,24 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #FFF8F0 0%, #FFE4C4 50%, #FFDAB9 100%);
+            background: linear-gradient(
+                135deg,
+                #FFF8F0 0%,
+                #FFE4C4 50%,
+                #FFDAB9 100%
+            );
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
+
+        /* ================= NAVBAR ================= */
 
         .navbar {
             position: fixed;
@@ -51,7 +68,7 @@
 
         .nav-container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -70,7 +87,11 @@
         }
 
         .logo span {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
+            background: linear-gradient(
+                45deg,
+                var(--primary),
+                var(--accent)
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -109,25 +130,7 @@
             width: 100%;
         }
 
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-        }
+        /* ================= HERO ================= */
 
         .hero {
             min-height: 100vh;
@@ -137,10 +140,23 @@
             text-align: center;
             padding: 120px 20px 60px;
             position: relative;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(210, 105, 30, 0.1) 0%, transparent 70%);
+
+            background:
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(255, 107, 157, 0.15) 0%,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(155, 89, 182, 0.15) 0%,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(210, 105, 30, 0.1) 0%,
+                    transparent 70%
+                );
         }
 
         .hero-content {
@@ -150,7 +166,11 @@
 
         .hero-badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--pink), var(--purple));
+            background: linear-gradient(
+                135deg,
+                var(--pink),
+                var(--purple)
+            );
             color: white;
             padding: 8px 20px;
             border-radius: 50px;
@@ -161,8 +181,13 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         .hero h1 {
@@ -175,7 +200,12 @@
         }
 
         .hero h1 span {
-            background: linear-gradient(45deg, var(--accent), var(--pink), var(--purple));
+            background: linear-gradient(
+                45deg,
+                var(--accent),
+                var(--pink),
+                var(--purple)
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -184,7 +214,7 @@
             font-size: 1.2rem;
             color: #5D4037;
             margin-bottom: 30px;
-            max-width: 600px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -196,18 +226,25 @@
             flex-wrap: wrap;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
+        .btn-primary,
+        .btn-secondary {
             padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            box-shadow: 0 6px 25px rgba(139, 69, 19, 0.35);
             transition: all 0.3s;
-            border: none;
             cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--accent)
+            );
+            color: white;
+            box-shadow: 0 6px 25px rgba(139, 69, 19, 0.35);
         }
 
         .btn-primary:hover {
@@ -218,13 +255,7 @@
         .btn-secondary {
             background: white;
             color: var(--primary);
-            padding: 14px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
             border: 2px solid var(--primary);
-            transition: all 0.3s;
         }
 
         .btn-secondary:hover {
@@ -232,6 +263,8 @@
             color: white;
             transform: translateY(-3px);
         }
+
+        /* ================= FLOATING ================= */
 
         .floating-brownie {
             position: absolute;
@@ -241,15 +274,42 @@
             pointer-events: none;
         }
 
-        .fb1 { top: 15%; left: 8%; animation-delay: 0s; }
-        .fb2 { top: 25%; right: 10%; animation-delay: 1.5s; font-size: 2.5rem; }
-        .fb3 { bottom: 20%; left: 12%; animation-delay: 3s; font-size: 2.8rem; }
-        .fb4 { bottom: 30%; right: 8%; animation-delay: 4.5s; }
+        .fb1 {
+            top: 15%;
+            left: 8%;
+        }
+
+        .fb2 {
+            top: 25%;
+            right: 10%;
+            animation-delay: 1.5s;
+            font-size: 2.5rem;
+        }
+
+        .fb3 {
+            bottom: 20%;
+            left: 12%;
+            animation-delay: 3s;
+            font-size: 2.8rem;
+        }
+
+        .fb4 {
+            bottom: 30%;
+            right: 8%;
+            animation-delay: 4.5s;
+        }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
         }
+
+        /* ================= GENERAL ================= */
 
         section {
             padding: 80px 20px;
@@ -257,7 +317,7 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .section-title {
@@ -276,16 +336,23 @@
             color: #6D4C41;
             font-size: 1.1rem;
             max-width: 600px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .title-underline {
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, var(--pink), var(--accent), var(--purple));
+            background: linear-gradient(
+                90deg,
+                var(--pink),
+                var(--accent),
+                var(--purple)
+            );
             margin: 16px auto 0;
             border-radius: 2px;
         }
+
+        /* ================= ABOUT ================= */
 
         .about {
             background: white;
@@ -293,7 +360,7 @@
             margin-top: -40px;
             position: relative;
             z-index: 5;
-            box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
         }
 
         .about-grid {
@@ -336,31 +403,42 @@
         }
 
         .owner-card {
-            background: linear-gradient(135deg, #FFF5EE, #FFE4C4);
+            background: linear-gradient(
+                135deg,
+                #FFF5EE,
+                #FFE4C4
+            );
             padding: 20px;
             border-radius: 16px;
             border-left: 5px solid var(--accent);
             margin-top: 24px;
         }
 
-        .owner-card strong {
-            color: var(--primary-dark);
-            font-size: 1.1rem;
-        }
+        /* ================= MENU ================= */
 
-        /* ===== BROWNIE MENU SECTION (NEW) ===== */
         .brownie-menu {
-            background: linear-gradient(180deg, white 0%, #FFF8F0 100%);
+            background: linear-gradient(
+                180deg,
+                white 0%,
+                #FFF8F0 100%
+            );
             padding-top: 60px;
         }
 
-        .menu-intro {
+        .menu-intro-wrapper {
             text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .menu-intro {
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--primary-dark);
-            margin-bottom: 40px;
-            background: linear-gradient(135deg, #FFE4C4, #FFDAB9);
+            background: linear-gradient(
+                135deg,
+                #FFE4C4,
+                #FFDAB9
+            );
             padding: 18px 30px;
             border-radius: 50px;
             display: inline-block;
@@ -372,7 +450,7 @@
             flex-direction: column;
             gap: 40px;
             max-width: 900px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .brownie-item {
@@ -392,7 +470,11 @@
 
         .brownie-item.active {
             border-color: var(--pink);
-            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
+            background: linear-gradient(
+                145deg,
+                #FFF8F0,
+                #FFEFD5
+            );
         }
 
         .brownie-name {
@@ -403,6 +485,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 15px;
         }
 
         .brownie-name span.tamil {
@@ -424,13 +507,20 @@
         }
 
         @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-15px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .size-row {
             display: grid;
-            grid-template-columns: 1fr auto;
+            grid-template-columns: 1fr auto auto;
             gap: 15px;
             align-items: center;
             background: rgba(255,255,255,0.7);
@@ -461,11 +551,15 @@
             font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent);
-            margin-right: 15px;
+            white-space: nowrap;
         }
 
         .order-btn {
-            background: linear-gradient(135deg, #25D366, #128C7E);
+            background: linear-gradient(
+                135deg,
+                #25D366,
+                #128C7E
+            );
             color: white;
             border: none;
             padding: 12px 22px;
@@ -482,7 +576,8 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-        /* Order Modal */
+        /* ================= MODAL ================= */
+
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -513,8 +608,15 @@
         }
 
         @keyframes popIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .modal h3 {
@@ -525,7 +627,7 @@
             text-align: center;
         }
 
-        .modal .selected-info {
+        .selected-info {
             text-align: center;
             background: #FFF5EE;
             padding: 12px;
@@ -536,7 +638,7 @@
             font-weight: 600;
         }
 
-        .modal .form-group {
+        .form-group {
             margin-bottom: 18px;
         }
 
@@ -585,7 +687,11 @@
         }
 
         .btn-send {
-            background: linear-gradient(135deg, #25D366, #128C7E);
+            background: linear-gradient(
+                135deg,
+                #25D366,
+                #128C7E
+            );
             color: white;
         }
 
@@ -594,19 +700,27 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-        /* Contact */
+        /* ================= CONTACT ================= */
+
         .contact {
             background: white;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(280px, 1fr)
+            );
             gap: 30px;
         }
 
         .contact-card {
-            background: linear-gradient(145deg, #FFF8F0, #FFEFD5);
+            background: linear-gradient(
+                145deg,
+                #FFF8F0,
+                #FFEFD5
+            );
             padding: 30px;
             border-radius: 20px;
             text-align: center;
@@ -634,6 +748,14 @@
             font-size: 1.05rem;
         }
 
+        .contact-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ================= FOOTER ================= */
+
         footer {
             background: var(--dark);
             color: #FFE4C4;
@@ -646,413 +768,59 @@
             color: var(--gold);
         }
 
+        /* ================= MOBILE ================= */
+
         @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
+
+            .nav-container {
+                justify-content: center;
             }
+
             .nav-links {
                 display: none;
             }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
             .size-row {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
             .size-price {
-                margin: 10px 0;
+                margin: 5px 0;
+            }
+
+            .order-btn {
+                width: 100%;
+            }
+
+            .brownie-name {
+                font-size: 1.5rem;
+            }
+
+            .menu-intro {
+                font-size: 1.1rem;
+            }
+
+            .modal {
+                padding: 25px 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Navbar -->
+    <!-- ================= NAVBAR ================= -->
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">🍫 <span>Jeswin Sweets</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Brownies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
-                📱 WhatsApp Order
-            </a>
-        </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="floating-brownie fb1">🍫</div>
-        <div class="floating-brownie fb2">🍪</div>
-        <div class="floating-brownie fb3">🤎</div>
-        <div class="floating-brownie fb4">✨</div>
-        <div class="hero-content">
-            <div class="hero-badge">✨ Premium Homemade Brownies ✨</div>
-            <h1>Jeswin Sweets<br><span>Brownies that melt your heart</span></h1>
-            <p>Freshly baked with love in Kumbakonam. Classic, Double, Triple, Ragi & Walnut Crunch – pure chocolate heaven.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn-primary">Order Now 🍫</a>
-                <a href="#contact" class="btn-secondary">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Jeswin Sweets</h2>
-                <div class="title-underline"></div>
-                <p>Premium quality brownies made with pure love & finest ingredients</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Premium Brownies">
-                </div>
-                <div class="about-content">
-                    <h3>Handcrafted with Passion</h3>
-                    <p>Every brownie is baked fresh using premium chocolate, pure butter and the finest ingredients. No preservatives. Just pure indulgence.</p>
-                    <p>From classic fudgy chocolate to rich triple chocolate and healthy ragi – we have something for every craving.</p>
-                    <div class="owner-card">
-                        <strong>👩‍🍳 Jeswin</strong><br>
-                        Owner & Head Baker<br>
-                        Kumbakonam, Tamil Nadu
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BROWNIE MENU -->
-    <section class="brownie-menu" id="menu">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Premium Brownies</h2>
-                <div class="title-underline"></div>
-                <p>Premium Quality Brownies • தரமான பிரவுனிகள்</p>
-            </div>
-
-            <div style="text-align:center;">
-                <div class="menu-intro">👇 Order செய்ய தேவையானதை தொடவும் 👇</div>
-            </div>
-
-            <div class="brownie-list">
-
-                <!-- 1. Classic Chocolate -->
-                <div class="brownie-item" onclick="toggleBrownie(this)">
-                    <div class="brownie-name">
-                        Classic Chocolate Brownie
-                        <span class="tamil">கிளாசிக் சாக்லேட் பிரவுனி</span>
-                    </div>
-                    <div class="size-options">
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>கால் கிலோ (¼ kg)</h4>
-                                <p>6 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹230</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Classic Chocolate Brownie', 'கால் கிலோ (6 Pieces)', 230)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>அரை கிலோ (½ kg)</h4>
-                                <p>12 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹450</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Classic Chocolate Brownie', 'அரை கிலோ (12 Pieces)', 450)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>ஒரு கிலோ (1 kg)</h4>
-                                <p>18 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹850</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Classic Chocolate Brownie', 'ஒரு கிலோ (18 Pieces)', 850)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Double Chocolate -->
-                <div class="brownie-item" onclick="toggleBrownie(this)">
-                    <div class="brownie-name">
-                        Double Chocolate Brownie
-                        <span class="tamil">டபுள் சாக்லேட் பிரவுனி</span>
-                    </div>
-                    <div class="size-options">
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>கால் கிலோ (¼ kg)</h4>
-                                <p>6 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹300</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Double Chocolate Brownie', 'கால் கிலோ (6 Pieces)', 300)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>அரை கிலோ (½ kg)</h4>
-                                <p>12 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹570</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Double Chocolate Brownie', 'அரை கிலோ (12 Pieces)', 570)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>ஒரு கிலோ (1 kg)</h4>
-                                <p>18 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹1100</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Double Chocolate Brownie', 'ஒரு கிலோ (18 Pieces)', 1100)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Triple Chocolate -->
-                <div class="brownie-item" onclick="toggleBrownie(this)">
-                    <div class="brownie-name">
-                        Triple Chocolate Brownie
-                        <span class="tamil">ட்ரிபிள் சாக்லேட் பிரவுனி</span>
-                    </div>
-                    <div class="size-options">
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>கால் கிலோ (¼ kg)</h4>
-                                <p>6 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹350</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Triple Chocolate Brownie', 'கால் கிலோ (6 Pieces)', 350)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>அரை கிலோ (½ kg)</h4>
-                                <p>12 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹680</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Triple Chocolate Brownie', 'அரை கிலோ (12 Pieces)', 680)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>ஒரு கிலோ (1 kg)</h4>
-                                <p>18 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹1310</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Triple Chocolate Brownie', 'ஒரு கிலோ (18 Pieces)', 1310)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Ragi Brownie -->
-                <div class="brownie-item" onclick="toggleBrownie(this)">
-                    <div class="brownie-name">
-                        Ragi Brownie
-                        <span class="tamil">ராகி பிரவுனி</span>
-                    </div>
-                    <div class="size-options">
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>கால் கிலோ (¼ kg)</h4>
-                                <p>6 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹210</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Ragi Brownie', 'கால் கிலோ (6 Pieces)', 210)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>அரை கிலோ (½ kg)</h4>
-                                <p>12 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹390</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Ragi Brownie', 'அரை கிலோ (12 Pieces)', 390)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>ஒரு கிலோ (1 kg)</h4>
-                                <p>18 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹910</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Ragi Brownie', 'ஒரு கிலோ (18 Pieces)', 910)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Walnut Crunch -->
-                <div class="brownie-item" onclick="toggleBrownie(this)">
-                    <div class="brownie-name">
-                        Walnut Crunch Brownie
-                        <span class="tamil">வால்நட் கிரஞ்ச் பிரவுனி</span>
-                    </div>
-                    <div class="size-options">
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>கால் கிலோ (¼ kg)</h4>
-                                <p>6 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹350</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Walnut Crunch Brownie', 'கால் கிலோ (6 Pieces)', 350)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>அரை கிலோ (½ kg)</h4>
-                                <p>12 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹650</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Walnut Crunch Brownie', 'அரை கிலோ (12 Pieces)', 650)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                        <div class="size-row">
-                            <div class="size-info">
-                                <h4>ஒரு கிலோ (1 kg)</h4>
-                                <p>18 Pieces</p>
-                            </div>
-                            <div style="display:flex; align-items:center;">
-                                <span class="size-price">₹1100</span>
-                                <button class="order-btn" onclick="event.stopPropagation(); openOrder('Walnut Crunch Brownie', 'ஒரு கிலோ (18 Pieces)', 1100)">Order செய்ய தொடவும்</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <div class="title-underline"></div>
-                <p>Order your favourite brownies today</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">👩‍🍳</div>
-                    <h3>Owner</h3>
-                    <p><strong>Jeswin</strong></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>WhatsApp / Call</h3>
-                    <p>+91 XXXXX XXXXX</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Location</h3>
-                    <p>Kumbakonam, Tamil Nadu</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 <strong>Jeswin Sweets</strong> • Premium Homemade Brownies • Kumbakonam</p>
-        <p style="margin-top:8px; font-size:0.85rem;">Made with 🍫 & ❤️</p>
-    </footer>
-
-    <!-- Order Modal -->
-    <div class="modal-overlay" id="orderModal">
-        <div class="modal">
-            <h3>Order Details</h3>
-            <div class="selected-info" id="selectedInfo"></div>
-            <div class="form-group">
-                <label>உங்கள் பெயர் / Your Name</label>
-                <input type="text" id="customerName" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label>மொபைல் நம்பர் / Phone Number</label>
-                <input type="tel" id="customerPhone" placeholder="10 digit mobile number" required>
-            </div>
-            <div class="modal-buttons">
-                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
-                <button class="btn-send" onclick="sendToWhatsApp()">Send to WhatsApp 💚</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let currentBrownie = '';
-        let currentSize = '';
-        let currentPrice = 0;
-
-        function toggleBrownie(el) {
-            // Close others
-            document.querySelectorAll('.brownie-item').forEach(item => {
-                if (item !== el) item.classList.remove('active');
-            });
-            el.classList.toggle('active');
-        }
-
-        function openOrder(brownie, size, price) {
-            currentBrownie = brownie;
-            currentSize = size;
-            currentPrice = price;
-            document.getElementById('selectedInfo').innerHTML = 
-                `<strong>\( {brownie}</strong><br> \){size} • ₹${price}`;
-            document.getElementById('orderModal').classList.add('active');
-            document.getElementById('customerName').value = '';
-            document.getElementById('customerPhone').value = '';
-        }
-
-        function closeModal() {
-            document.getElementById('orderModal').classList.remove('active');
-        }
-
-        function sendToWhatsApp() {
-            const name = document.getElementById('customerName').value.trim();
-            const phone = document.getElementById('customerPhone').value.trim();
-
-            if (!name || !phone) {
-                alert('பெயர் மற்றும் மொபைல் நம்பர் கட்டாயம்!');
-                return;
-            }
-
-            // CHANGE THIS NUMBER TO YOUR REAL WHATSAPP NUMBER
-            const ownerNumber = '918056587983';
-
-            const message = `🍫 *New Brownie Order - Jeswin Sweets*%0A%0A` +
-                `👤 *Name:* ${name}%0A` +
-                `📱 *Phone:* ${phone}%0A%0A` +
-                `🛒 *Order Details:*%0A` +
-                `• Brownie: ${currentBrownie}%0A` +
-                `• Size: ${currentSize}%0A` +
-                `• Price: ₹${currentPrice}%0A%0A` +
-                `_Ordered from website_`;
-
-            const url = `https://wa.me/\( {918056587983}?text= \){message}`;
-            window.open(url, '_blank');
-            closeModal();
-        }
-
-        // Close modal on outside click
-        document.getElementById('orderModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-    </script>
-</body>
-</html>
+            <a 
